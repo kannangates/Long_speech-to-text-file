@@ -1,3 +1,4 @@
+# For Single Speaker
 from google.cloud import storage
 import wave
 from google.cloud.speech import types
@@ -66,7 +67,7 @@ def google_transcribe(audio_file_name):
 
     upload_blob(bucket_name, source_file_name, destination_blob_name)
 
-    gcs_uri = 'gs://speech2textaudio/' + audio_file_name
+    gcs_uri = 'gs://aud2txt/' + audio_file_name
     transcript = ''
 
     client = speech.SpeechClient()
